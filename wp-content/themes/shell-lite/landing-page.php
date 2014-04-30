@@ -148,46 +148,13 @@
  <div class="col-sm-1">&nbsp;</div>
  
  <div class="col-sm-5">
-<div class="row">
-
-<div class="col-sm-6"><h2>Heading</h2>
-
-<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, 
-sed diam nonummy nibh euismod tincidunt ut laoreet dolore 
-magna aliquam erat </p>
-
-</div>
-
-<div class="col-sm-6"><h2>Heading</h2>
-
-<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, 
-sed diam nonummy nibh euismod tincidunt ut</p>
-
-</div>
 
 
-</div> <!-- /.row -->
-
-<div class="row">
-
-<div class="col-sm-6"><h2>Heading</h2>
-
-<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, 
-sed diam nonummy nibh euismod tincidunt ut laoreet dolore 
-magna aliquam erat volutpat. </p>
-
-</div>
-
-<div class="col-sm-6"><h2>Heading</h2>
-
-<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, 
-sed diam nonummy nibh euismod tincidunt ut laoreet dolore 
-magna aliquam erat volutpat.</p>
-
-</div>
+<?php
+shell_list_posts_homepage();
+?>
 
 
-</div> <!-- /.row -->
  </div> <!-- /.col-sm-5 -->
  
   <div class="col-sm-5">
@@ -292,7 +259,13 @@ magna aliquam erat volutpat.</p>
 <div class="footerContent">
 	<div class="row">
 	<div class="col-sm-1"></div>
-	<div class="col-sm-3"><h2>Recent Posts</h2></div>
+	<div class="col-sm-3 recentPosts"><h2>Recent Posts</h2>
+	<div class="clearfix">
+	
+	<?php shell_recent_posts_homepage(); ?>
+
+	</div>	
+	</div>
 	
 	<div class="col-sm-3 central">
 	<h2>Blog Topics</h2>
@@ -305,8 +278,13 @@ magna aliquam erat volutpat.</p>
 		?>
 		<div><a class="btn btn-primary pull-left" href="<?php bloginfo('url'); ?>/feed/">Subscribe via RSS</a></div>
 	</div>
-	<div class="col-sm-3"><h2>Contact Us</h2></div>
-	<div class="col-sm-1"></div>
+
+	<div class="col-sm-3 contactUs">
+		<?php shell_contact_us_homepage(); ?>
+	</div>	
+
+	<div class="col-sm-1">
+	</div>
 	
 	</div> <!-- /.row in footer -->
 </div> <!-- /.footerContent -->

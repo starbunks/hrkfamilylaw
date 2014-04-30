@@ -16,16 +16,22 @@
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('DB_NAME', 'hrk');
+// define('DB_NAME', 'hrk');
 
 /** MySQL database username */
-define('DB_USER', 'hrk_admin');
+// define('DB_USER', 'hrk_admin');
 
 /** MySQL database password */
-define('DB_PASSWORD', '4hrkLAW!');
+// define('DB_PASSWORD', '4hrkLAW!');
 
 /** MySQL hostname */
-define('DB_HOST', 'mysqlv111');
+// define('DB_HOST', 'mysqlv111');
+
+
+define('DB_NAME', 'hrkfamilylaw');
+define('DB_USER', 'root');
+define('DB_PASSWORD', 'password1');
+define('DB_HOST', 'localhost');
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8');
