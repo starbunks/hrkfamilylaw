@@ -112,49 +112,49 @@
  <div class="col-sm-1">&nbsp;</div>
  
  <div class="col-sm-5 homeHeadlines">
-  <h1>Headline Here</h1>
-<div class="row">
+  <h1>Cases We Handle</h1>
+	<?php shell_list_posts_homepage(); ?>
+<!--
+	<div class="row">
 
-<div class="col-sm-6"><h2>Child Custody</h2>
+		<div class="col-sm-6">
+			<h2>Child Custody</h2>
+			<p>We understand that children are often the most important consideration in
+		any family law case.</p>
 
-<p>We understand that children are often the most important consideration in
-any family law case.</p>
+			<a class="btn btn-primary pull-left" href="http://www.hrkfamilylaw.com/practice-areas/child-custody/">More</a>
+		</div>
 
-<a class="btn btn-primary pull-left" href="http://www.hrkfamilylaw.com/practice-areas/child-custody/">More</a>
-</div>
+		<div class="col-sm-6"><h2>Appeals</h2>
 
-<div class="col-sm-6"><h2>Appeals</h2>
+		<p>In family law cases, there are instances when a trial court 
+		does not render a fair, just, or equitable decision.</p>
+		<a class="btn btn-primary pull-left" href="http://www.hrkfamilylaw.com/practice-areas/appeals/">More</a>
 
-<p>In family law cases, there are instances when a trial court 
-does not render a fair, just, or equitable decision.</p>
-<a class="btn btn-primary pull-left" href="http://www.hrkfamilylaw.com/practice-areas/appeals/">More</a>
+		</div>
 
-</div>
-
-
-</div> <!-- /.row -->
-
-<div class="row">
-
-<div class="col-sm-6"><h2>Grandparent Visitation</h2>
-
-<p>In today's families, grandparents often play a larger 
-role in raising and caring for their grandchildren.</p>
-<a class="btn btn-primary pull-left" href="http://www.hrkfamilylaw.com/practice-areas/grandparent-visitation/">More</a>
-
-</div>
-
-<div class="col-sm-6"><h2>Collaborative Divorce</h2>
-
-<p>Collaborative Divorce provides an alternative path to traditional 
-litigation for families contemplating divorce.</p>
-<a class="btn btn-primary pull-left" href="http://www.hrkfamilylaw.com/practice-areas/collaborative-divorce/">More</a>
-
-</div>
+	</div>
 
 
-</div> <!-- /.row -->
- </div> <!-- /.col-sm-5 -->
+	<div class="row">
+
+		<div class="col-sm-6"><h2>Grandparent Visitation</h2>
+
+		<p>In today's families, grandparents often play a larger 
+		role in raising and caring for their grandchildren.</p>
+		<a class="btn btn-primary pull-left" href="http://www.hrkfamilylaw.com/practice-areas/grandparent-visitation/">More</a>
+		</div>
+
+		<div class="col-sm-6"><h2>Collaborative Divorce</h2>
+
+		<p>Collaborative Divorce provides an alternative path to traditional 
+		litigation for families contemplating divorce.</p>
+		<a class="btn btn-primary pull-left" href="http://www.hrkfamilylaw.com/practice-areas/collaborative-divorce/">More</a>
+		</div>
+
+	</div>
+-->
+ </div> <!-- /.col-sm-5 homeHeadlines -->
  
   <div class="col-sm-5">
  <h1>FAQ</h1>
@@ -274,46 +274,10 @@ the right fit.</p>
  <div class="col-sm-10">
  <h1>Our Attorneys</h1>
  
+
+
  <div class="row attorneys homeHeadlines">
- <div class="col-sm-4">
- <img src="<?php echo bloginfo('template_directory'); ?>/images/brianJhurst.jpg" width="80%" style="margin: 0 auto 12px auto;" />
- <h2>Brian J Hurst</h2>
- <p>Brian J. Hurst has limited his practice to Matrimonial and Family Law
-since entering the legal profession. He was recognized by Law Bulletin
-Publishing in 2009 as one of 40 Illinois Attorneys Under Forty to Watch,
-and has successfully argued in both the Illinois Appellate Courts and the
-Illinois Supreme Court. <a class="bioTeaser" href="http://www.hrkfamilylaw.com/attorneys/brian-j-hurst/">MORE</a></p>
-</div>
- <div class="col-sm-4">
- <img src="<?php echo bloginfo('template_directory'); ?>/images/johnAkay.jpg" width="80%" style="margin: 0 auto 12px auto;" />
- <h2>Neil A Robin</h2>
- <p>With over 36 years of experience, Neil is a seasoned trial lawyer
-well-known for his aggressive courtroom style. The most outstanding
-feature of Neil's practice is that he runs his office like that of an old
-time family doctor, meeting with clients early in the morning, late in the
-evening, and on the weekend. <a class="bioTeaser" href="http://www.hrkfamilylaw.com/attorneys/john-a-kay/">MORE</a></p>
- </div>
- 
- <div class="col-sm-4"><h2>John A. Kay</h2>
- <p>John Kay has been practicing law in Illinois for more than 20 years. Since
-2001, he has focused his practice on complex family law. He is known as a
-powerful litigator and tireless advocate for the interests of his clients,
-earning the respect of clients as well as opposing counsels, and judges. 
-<a class="bioTeaser" href="http://www.hrkfamilylaw.com/attorneys/neil-a-robin/">MORE</a></p>
- </div>
- 
- </div> <!-- / attorneys content .row -->
- 
-<!--  <div class="row attorneys homeHeadlines">
- <div class="col-sm-4"><h2>Brian J. Hurst</h2>
- <p></p></div>
- <div class="col-sm-4"><h2>Neil A. Robin</h2>
- <p></p></div>
- <div class="col-sm-4"><h2>John A. Kay</h2>
- <p></p></div>
- 
- </div>  / attorneys content .row -->
- 
+	<?php get_attorney_posttype(); ?>
  </div>
  
  
