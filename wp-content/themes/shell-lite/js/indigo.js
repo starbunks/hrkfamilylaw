@@ -23,6 +23,13 @@ jQuery(".panel").on("hidden.bs.collapse",function(){
 
 });
 
+jQuery(".menu-top-nav-bar-container ul li a").hover(function(e){
+
+//	jQuery(this).toggleClass("btn").toggleClass("btn-primary");
+
 });
+
+}); //doc ready
+
 
 }(jQuery));

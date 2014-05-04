@@ -14,57 +14,14 @@
  * @link           http://codex.wordpress.org/Theme_Development#Pages_.28page.php.29
  * @since          available since Release 1.0
  */
+ 
+ //get_header();
+ 
+ include '_header.php';
+ 
  ?>
 
-<!doctype html>
-<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
-<!--[if lt IE 7 ]> <html class="no-js ie6" <?php language_attributes(); ?>> <![endif]-->
-<!--[if IE 7 ]>    <html class="no-js ie7" <?php language_attributes(); ?>> <![endif]-->
-<!--[if IE 8 ]>    <html class="no-js ie8" <?php language_attributes(); ?>> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--> <html class="no-js" <?php language_attributes(); ?>> <!--<![endif]-->
-<head>
 
-<meta charset="<?php bloginfo('charset'); ?>" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-
-<title><?php wp_title('|', true, 'right'); ?><?php bloginfo('name'); ?></title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<link rel="profile" href="http://gmpg.org/xfn/11" />
-
-<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/bootstrap.css" />
-<link href='http://fonts.googleapis.com/css?family=Roboto:400,500' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/theme_indigo.css" />
-<?php
-    if (is_singular() && get_option('thread_comments'))
-        wp_enqueue_script('comment-reply');
-		wp_head();
-?>
-<script src="<?php bloginfo('template_directory'); ?>/js/bootstrap.js"></script>
-<script src="<?php bloginfo('template_directory'); ?>/js/indigo.js"></script>
-</head>
-<body>
-<div class="headerBackground">
-<div class="indigoHeader">
-
-	<p><?php bloginfo('description'); ?></p>
-
-</div>
-</div>
-<div class="menuBackground">
-<div class="topNavMenu">
-<img src="<?php bloginfo('template_directory'); ?>/images/hrk_logo_bw.jpg" />
-<?php
-    wp_nav_menu(
-        array(
-            'theme_location' => 'topmenu',
-            'container' => 'div',
-            'menu_class' => 'navigationIndigo'
-        )
-    );
-?>
-</div>
-</div>
 <div class="mainContainer">
 <?php if (have_posts()): while (have_posts()) : the_post(); 
 
@@ -75,7 +32,7 @@
 
  <div class="row">
 	<div class="col-sm-1">&nbsp;</div>
-	<div class="col-sm-5">
+	<div class="col-sm-5 homeHeadlines">
 	<h1>Let's Get Moving</h1>
 	<p>At Hurst, Robin & Kay, LLC, we know the last thing you need in the midst of a crucial divorce or 
 	family law matter is an attorney that drags their feet throughout the process. That's why we're 
@@ -141,20 +98,62 @@
 	<div class="col-sm-1">&nbsp;</div>
  
  </div> <!-- /.row -->
-
  
  <div class="row">
  
+ <div class="col-sm-1"></div>
+ <div class="col-sm-10 divider"></div>
+ 
+ </div><!-- /divider .row -->
+
+ 
+ <div class="row">
+
  <div class="col-sm-1">&nbsp;</div>
  
- <div class="col-sm-5">
+ <div class="col-sm-5 homeHeadlines">
+  <h1>Headline Here</h1>
+<div class="row">
+
+<div class="col-sm-6"><h2>Child Custody</h2>
+
+<p>We understand that children are often the most important consideration in
+any family law case.</p>
+
+<a class="btn btn-primary pull-left" href="http://www.hrkfamilylaw.com/practice-areas/child-custody/">More</a>
+</div>
+
+<div class="col-sm-6"><h2>Appeals</h2>
+
+<p>In family law cases, there are instances when a trial court 
+does not render a fair, just, or equitable decision.</p>
+<a class="btn btn-primary pull-left" href="http://www.hrkfamilylaw.com/practice-areas/appeals/">More</a>
+
+</div>
 
 
-<?php
-shell_list_posts_homepage();
-?>
+</div> <!-- /.row -->
+
+<div class="row">
+
+<div class="col-sm-6"><h2>Grandparent Visitation</h2>
+
+<p>In today's families, grandparents often play a larger 
+role in raising and caring for their grandchildren.</p>
+<a class="btn btn-primary pull-left" href="http://www.hrkfamilylaw.com/practice-areas/grandparent-visitation/">More</a>
+
+</div>
+
+<div class="col-sm-6"><h2>Collaborative Divorce</h2>
+
+<p>Collaborative Divorce provides an alternative path to traditional 
+litigation for families contemplating divorce.</p>
+<a class="btn btn-primary pull-left" href="http://www.hrkfamilylaw.com/practice-areas/collaborative-divorce/">More</a>
+
+</div>
 
 
+</div> <!-- /.row -->
  </div> <!-- /.col-sm-5 -->
  
   <div class="col-sm-5">
@@ -236,61 +235,97 @@ shell_list_posts_homepage();
       <div class="panel-body">
         <p>Collaborative Divorce provides an alternative path to traditional litigation for 
 		families contemplating divorce. The essence of the Collaborative Divorce process is 
-		the shared belief by the parties that it is in their family’s best interest to avoid 
+		the shared belief by the parties that it is in their family's best interest to avoid 
 		litigation.</p>
       <a href="http://www.hrkfamilylaw.com/practice-areas/collaborative-divorce/" class="btn btn-primary pull-right">More</a>
      </div>
     </div>
   </div>
 
+</div> <!-- /.panel-group -->
+
+<div class="row">
+
+<div class="col-sm-10 homeHeadlines">
+<h1>Need More Answers?</h1>
+<p>It costs nothing to determine whether
+your case has merit or whether our firm is
+the right fit.</p>
+<a class="btn btn-primary pull-left" href="http://www.hrkfamilylaw.com/contact-us/">Free Case Evaluation</a>
+</div>
 </div>
 
- </div>
+ </div> <!-- /.col-sm-5 -->
  
   <div class="col-sm-1">&nbsp;</div>
  
- </div>
-    
+ </div> <!-- /headline .row -->
+ 
+ <div class="row">
+ 
+ <div class="col-sm-1"></div>
+ <div class="col-sm-10 divider"></div>
+ 
+ </div><!-- /divider .row --> 
 
+ <div class="row">
+ 
+ <div class="col-sm-1"></div>
+ <div class="col-sm-10">
+ <h1>Our Attorneys</h1>
+ 
+ <div class="row attorneys homeHeadlines">
+ <div class="col-sm-4">
+ <img src="<?php echo bloginfo('template_directory'); ?>/images/brianJhurst.jpg" width="80%" style="margin: 0 auto 12px auto;" />
+ <h2>Brian J Hurst</h2>
+ <p>Brian J. Hurst has limited his practice to Matrimonial and Family Law
+since entering the legal profession. He was recognized by Law Bulletin
+Publishing in 2009 as one of 40 Illinois Attorneys Under Forty to Watch,
+and has successfully argued in both the Illinois Appellate Courts and the
+Illinois Supreme Court. <a class="bioTeaser" href="http://www.hrkfamilylaw.com/attorneys/brian-j-hurst/">MORE</a></p>
+</div>
+ <div class="col-sm-4">
+ <img src="<?php echo bloginfo('template_directory'); ?>/images/johnAkay.jpg" width="80%" style="margin: 0 auto 12px auto;" />
+ <h2>Neil A Robin</h2>
+ <p>With over 36 years of experience, Neil is a seasoned trial lawyer
+well-known for his aggressive courtroom style. The most outstanding
+feature of Neil's practice is that he runs his office like that of an old
+time family doctor, meeting with clients early in the morning, late in the
+evening, and on the weekend. <a class="bioTeaser" href="http://www.hrkfamilylaw.com/attorneys/john-a-kay/">MORE</a></p>
+ </div>
+ 
+ <div class="col-sm-4"><h2>John A. Kay</h2>
+ <p>John Kay has been practicing law in Illinois for more than 20 years. Since
+2001, he has focused his practice on complex family law. He is known as a
+powerful litigator and tireless advocate for the interests of his clients,
+earning the respect of clients as well as opposing counsels, and judges. 
+<a class="bioTeaser" href="http://www.hrkfamilylaw.com/attorneys/neil-a-robin/">MORE</a></p>
+ </div>
+ 
+ </div> <!-- / attorneys content .row -->
+ 
+<!--  <div class="row attorneys homeHeadlines">
+ <div class="col-sm-4"><h2>Brian J. Hurst</h2>
+ <p></p></div>
+ <div class="col-sm-4"><h2>Neil A. Robin</h2>
+ <p></p></div>
+ <div class="col-sm-4"><h2>John A. Kay</h2>
+ <p></p></div>
+ 
+ </div>  / attorneys content .row -->
+ 
+ </div>
+ 
+ 
+ </div> <!-- /attorneys .row -->
  
 </div> <!-- /.mainContainer -->
 
-<div class="footerBackground">
-<div class="footerContent">
-	<div class="row">
-	<div class="col-sm-1"></div>
-	<div class="col-sm-3 recentPosts"><h2>Recent Posts</h2>
-	<div class="clearfix">
+<?php
+
+	//get_footer();
+	include '_footer.php';
 	
-	<?php shell_recent_posts_homepage(); ?>
-
-	</div>	
-	</div>
-	
-	<div class="col-sm-3 central">
-	<h2>Blog Topics</h2>
-	<?php
-		$catList = wp_list_categories("echo=0&hide_empty=0&title_li=");
-		$catList = strip_tags($catList,"<a>");
-		$catList = str_replace("<a",'<div class="catLink"><a',$catList);
-		$catList = str_replace("</a>","</a></div>",$catList);
-			echo $catList;
-		?>
-		<div><a class="btn btn-primary pull-left" href="<?php bloginfo('url'); ?>/feed/">Subscribe via RSS</a></div>
-	</div>
-
-	<div class="col-sm-3 contactUs">
-		<?php shell_contact_us_homepage(); ?>
-	</div>	
-
-	<div class="col-sm-1">
-	</div>
-	
-	</div> <!-- /.row in footer -->
-</div> <!-- /.footerContent -->
-
-</div> <!-- /.footerBackground -->
-
-<?php wp_footer(); ?>
+	?>
 </body>
 </html>
