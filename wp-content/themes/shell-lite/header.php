@@ -22,7 +22,8 @@
 <!--[if IE 8 ]>    <html class="no-js ie8" <?php language_attributes(); ?>> <![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!--> <html class="no-js" <?php language_attributes(); ?>> <!--<![endif]-->
 <head>
-
+<?php echo '<!-- ' . basename( get_page_template() ) . ' -->'; ?>
+<?php echo '<!-- ' . get_the_title() . ' -->'; ?>
 <meta charset="<?php bloginfo('charset'); ?>" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
@@ -38,7 +39,6 @@
         wp_enqueue_script('comment-reply');
 		wp_head();
 ?>
-
 </head>
 
 <body <?php body_class(); ?>>
@@ -110,7 +110,7 @@
 
                 <ul class="menu">
                     <li><a href="<?php echo home_url(); ?>/">Home</a></li>
-                    <?php wp_list_pages('title_li='); ?>
+                    <?php wp_list_pages('title_li=&exclude=249'); ?>
                 </ul><!-- end of .menu -->
                 
 				<?php } ?>
