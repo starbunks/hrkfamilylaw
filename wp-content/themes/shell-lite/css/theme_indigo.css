@@ -12,22 +12,29 @@ Theme Indigo Styles
   /*font-weight: normal;
 	font-style: normal;*/
 }
+@font-face {
+  font-family: 'bougan_book_ssibook';
+  src: url('fonts/bougan-book-ssi-book-webfont.eot');
+  src: url('fonts/bougan-book-ssi-book-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/bougan-book-ssi-book-webfont.woff') format('woff'), url('fonts/bougan-book-ssi-book-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 .mainContainer h1 {
-  font-family: 'Conv_Bougan Book SSi Book', sans-serif;
+  font-family: 'bougan_book_ssibook', sans-serif;
   font-size: 36px;
   line-height: 40px;
   font-weight: bold;
   color: #2D338B;
 }
 .mainContainer h2 {
-  font-family: 'Conv_Bougan Book SSi Book', sans-serif;
+  font-family: 'bougan_book_ssibook', sans-serif;
   font-size: 30px;
   line-height: 36px;
   font-weight: bold;
   color: #2D338B;
 }
 .mainContainer h3 {
-  font-family: 'Conv_Bougan Book SSi Book', sans-serif;
+  font-family: 'bougan_book_ssibook', sans-serif;
   font-size: 24px;
   line-height: 30px;
   font-weight: bold;
@@ -39,15 +46,14 @@ Theme Indigo Styles
 }
 .mainContainer {
   font-size: 20px;
-  font-family: 'Conv_Bougan Book SSi Book', sans-serif;
-  font-weight: 400;
+  font-family: 'bougan_book_ssibook', sans-serif;
 }
 .mainContainer p {
-  color: #868686;
+  color: #666;
 }
 .carousel-caption p {
   color: #fff;
-  font-weight: lighter;
+  font-weight: lightest;
 }
 .headerBackground {
   background: #2D338B;
@@ -94,7 +100,7 @@ Theme Indigo Styles
   padding: 68px 35px 0 0;
 }
 .menu-top-nav-bar-container ul li a {
-  color: #000;
+  color: #414042;
   font-size: 24px;
   line-height: 30px;
 }
@@ -102,7 +108,7 @@ Theme Indigo Styles
   text-decoration: none;
 }
 .footerBackground {
-  background: #2C338D;
+  background: #2D338B;
   width: 100%;
   padding: 8px 0 12px 0;
   margin: 8px 0 0 0;
@@ -112,7 +118,7 @@ Theme Indigo Styles
   margin: 0 auto;
 }
 .footerBackground .footerContent h2 {
-  font-family: 'Conv_Bougan Book SSi Book', sans-serif;
+  font-family: 'bougan_book_ssibook', sans-serif;
   color: #fff;
   font-size: 30px;
 }
@@ -133,7 +139,7 @@ Theme Indigo Styles
   font-size: 140%;
 }
 .footerBackground .footerContent .contactUs {
-  font-family: 'Conv_Bougan Book SSi Book', sans-serif;
+  font-family: 'bougan_book_ssibook', sans-serif;
   color: #fff;
   font-size: 125%;
 }
@@ -152,7 +158,7 @@ Theme Indigo Styles
 .footerBackground .footerContent .recentPosts .linkItem {
   max-width: 180px;
   float: left;
-  font-family: 'Conv_Bougan Book SSi Book', sans-serif;
+  font-family: 'bougan_book_ssibook', sans-serif;
   color: #fff;
   font-size: 125%;
 }
@@ -165,9 +171,24 @@ Theme Indigo Styles
   text-align: top;
   background: url('../images/recentPosts.jpg') -32px 0 no-repeat;
 }
+.footerBackground .footerContent .col-sm-1,
+.footerBackground .footerContent .col-sm-3 {
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  float: left;
+}
+.footerBackground .footerContent .col-sm-3 {
+  width: 25%;
+}
+.footerBackground .footerContent .row {
+  margin: 0 -15px 0 -15px;
+}
 .homeHeadlines h2 {
   font-size: 110%;
   color: #98A1CA;
+  line-height: 120%;
 }
 .homeHeadlines p {
   margin-bottom: 16px;
