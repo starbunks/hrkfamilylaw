@@ -126,7 +126,9 @@ function shell_recent_posts_homepage() {
 		// echo '<li><a href="' . get_permalink($recent["ID"]) . 
 		// '" title="Look '.esc_attr($recent["post_title"]).'" >' .   
 		// $recent["post_title"].'</a> </li> ';
-				echo '<div class="clearfix"><div class="marker"></div><div class="linkItem"><a href="' . get_permalink($recent["ID"]) . '" title="Look '.esc_attr($recent["post_title"]).'" >' .   $recent["post_title"].'</a></div></div>';
+		echo '<div class="clearfix"><div class="marker"></div><div class="linkItem"><a href="' . 
+		get_permalink($recent["ID"]) . '" title="Look ' .
+		esc_attr($recent["post_title"]).'" >' .   $recent["post_title"].'</a></div></div>';
 	}		
 
 			
