@@ -34,39 +34,34 @@ function create_attorney_posttype() {
 }
 
 add_action( 'init', 'create_attorney_posttype' );
-
+	
 function get_attorney_posttype() {
 	
 	$args = array( 	'numberposts' => '4', 
 					'orderby' => 'post_date', 
-					'order' => 'DESC', 
+					// 'order' => 'DESC', 
+					'order' => 'ASC', 
 					'post_type' => 'attorney',
 					'post_status' => 'publish',
-					'attachment' =>true, 
+					// 'attachment' =>true, 
 					);
-					
 
     $recent_posts = wp_get_recent_posts( $args );
 
 	foreach( $recent_posts as $recent ){
-		print_r($recent);
-		// echo '<li><a href="' . get_permalink($recent["ID"]) . 
-		// '" title="Look '.esc_attr($recent["post_title"]).'" >' .   
-		// $recent["post_title"].'</a> </li> ';
+
+		$image = wp_get_attachment_image_src( get_post_thumbnail_id( $recent["ID"] ), 'single-post-thumbnail' );
+		$a_custom_values = get_post_custom_values('bio_link', $recent["ID"]);
 		
-				// echo '<div class="clearfix"><div class="marker"></div><div class="linkItem"><a href="' . get_permalink($recent["ID"]) . '" title="Look '.esc_attr($recent["post_title"]).'" >' .   $recent["post_title"].'</a></div></div>';
+		echo '<div class="col-sm-4">';
+		echo '<img src="'. $image[0] . '" width="80%" style="margin: 0 auto 12px auto;" />';
+		echo '<h2>' . $recent["post_title"] . '</h2>';
+		echo '<p>' . $recent["post_content"];
+		echo '<a class="bioTeaser" href="' . $a_custom_values[0] . '">MORE</a></p>';
+		
+		echo '</div>';
+		
 	}
-					
-	
-	// $args = array( 'post_type' => 'attorney', 'posts_per_page' => 3 );
-	// $loop = new WP_Query( $args );
-	// print_r($loop);
-	// while ( $loop->have_posts() ) : $loop->the_post();
-	// 	the_title();
-	// 	echo '<div class="entry-content">';
-	// 	the_content();
-	// 	echo '</div>';
-	// endwhile;
 }
 
 
@@ -91,13 +86,16 @@ function shell_list_posts_homepage() {
 
 	foreach( $recent_posts as $recent )
 	{
-
+		// print_r($recent);
 		if ( ($row_count == 0) || ($row_count == 2) ) {
 			echo '<div class="row">';
         }
-		echo '<div class="col-sm-6"><h2>' . $recent["post_title"] . '</h2>';
-		echo '<p>' . esc_attr($recent["post_excerpt"]) .  '</p></div>';
-	
+		echo '<div class="col-sm-6">';
+		echo '<h2>' . $recent["post_title"] . '</h2>';
+		echo '<p>' . esc_attr($recent["post_excerpt"]) .  '</p>';
+		echo '<a class="btn btn-primary pull-left" href="' . $recent["guid"] . '">More</a>';
+		echo '</div>';
+		
 		$row_count++;	
 		if ( ($row_count == 2) || ($row_count == 4) || ($row_count == $last_value) ) {
 			echo '</div>';
