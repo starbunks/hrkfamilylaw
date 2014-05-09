@@ -86,26 +86,48 @@ Theme Indigo Styles
 }
 .topNavMenu img {
   float: left;
+  margin-top: 19px;
 }
 .menu-top-nav-bar-container {
   width: 690px;
   float: left;
-  padding: 0 0 0 30px;
+  padding: 0;
 }
 .menu-top-nav-bar-container ul {
   list-style-type: none;
 }
 .menu-top-nav-bar-container ul li {
   display: inline-block;
-  padding: 68px 35px 0 0;
+  padding: 60px 0 0 0;
+  width: 100px;
+  float: left;
+  height: 60px;
 }
+.menu-top-nav-bar-container ul li:last {
+  width: 125px;
+}
+/* contact us menu item */
+.menu-top-nav-bar-container ul li.menu-item-284 {
+  width: 125px;
+}
+
 .menu-top-nav-bar-container ul li a {
+  display: block;
+  margin: 65px 0 0 0;
   color: #414042;
-  font-size: 24px;
-  line-height: 30px;
+  font-size: 22px;
+  line-height: 29px;
+  margin: auto 0;
+  padding: 3px;
+  border: 1px solid rgba(0, 0, 0, 0);
+  border-radius: 4px;
+  text-align: center;
+  vertical-align: middle;
 }
 .menu-top-nav-bar-container ul li a:hover {
   text-decoration: none;
+  background: #2D338B;
+  color: #fff;
 }
 .footerBackground {
   background: #2D338B;
@@ -184,6 +206,10 @@ Theme Indigo Styles
 }
 .footerBackground .footerContent .row {
   margin: 0 -15px 0 -15px;
+}
+.footerAnchor {
+  color: #ffffff;
+  text-decoration: none;
 }
 .homeHeadlines h2 {
   font-size: 110%;

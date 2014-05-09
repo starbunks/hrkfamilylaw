@@ -51,7 +51,7 @@ if (is_page(249)){
 </div>
 <div class="menuBackground">
 <div class="topNavMenu">
-<img src="<?php bloginfo('template_directory'); ?>/images/hrk_logo_bw.jpg" />
+<img src="<?php bloginfo('template_directory'); ?>/images/hrk_logo_bw.jpg" width="240px" height="94px" />
 <?php
     wp_nav_menu(
         array(

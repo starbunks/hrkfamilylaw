@@ -1,4 +1,13 @@
 <?php
+/**
+ * Theme's Functions and Definitions
+ *
+ *
+ * @file           functions-custom.php
+ * @filesource     wp-content/themes/shell-lite/includes/functions-custom.php
+ */
+?>
+<?php
 
 
 function create_attorney_posttype() {
@@ -25,7 +34,7 @@ function create_attorney_posttype() {
 		'exclude_from_search' 	=> true,
 		'publicly_queryable' 	=> true,
 		'supports'      		=> array( 'title', 'editor', 'thumbnail', 'excerpt', 'custom-fields' ),
-		'taxonomies'   			=> true,
+		'taxonomies' => array('category'),
 		'has_archive'   		=> true,
 	);
 	
@@ -162,6 +171,4 @@ function shell_authors_homepage() {
 	    'feed'          => "more stuff");
 	
 }
-
-
 ?>

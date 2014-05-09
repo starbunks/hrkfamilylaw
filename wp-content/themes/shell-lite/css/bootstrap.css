@@ -5502,13 +5502,11 @@ button.close {
   border-top-right-radius: 10px;
   max-width: 525px;
   position: absolute;
-  left: 55px;
   bottom: 0;
   z-index: 10;
   padding: 20px;
   color: #fff;
   background-color: rgba(45, 51, 139, 0.7);
-  text-align: center;
 }
 .carousel-caption .btn {
   text-shadow: none;
@@ -5527,10 +5525,10 @@ button.close {
     margin-left: -15px;
     font-size: 30px;
   }
-  .carousel-caption {
+/*  .carousel-caption {
     left: 55px;
   }
-  .carousel-indicators {
+*/  .carousel-indicators {
     display: none;
   }
 }
