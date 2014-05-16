@@ -16,9 +16,9 @@
  * @since          available since Release 1.0
  */
 ?>
-<?php //get_header(); 
+<?php get_header(); 
 
-	include '_header.php';
+	// include '_header.php';
 
 ?>
 
@@ -96,8 +96,9 @@
         </div><!-- end of #content -->
 
 <?php get_sidebar(); ?>
-<?php //get_footer(); 
+<?php 
+get_footer(); 
 
-	include '_footer.php';
+	// include '_footer.php';
 
 ?>
