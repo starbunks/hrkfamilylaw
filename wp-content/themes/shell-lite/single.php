@@ -30,7 +30,7 @@
 
                 <div class="post-meta">
                 <?php 
-                    printf( __( '<span class="%1$s">Posted on</span> %2$s by %3$s', 'shell' ),'meta-prep meta-prep-author',
+                    printf( __( '<span class="%1$s">Posted on</span> %2$s', 'shell' ),'meta-prep meta-prep-author',
 		            sprintf( '<a href="%1$s" title="%2$s" rel="bookmark">%3$s</a>',
 			            get_permalink(),
 			            esc_attr( get_the_time() ),
