@@ -15,9 +15,9 @@
  * @since          available since Release 1.0
  */
  
- //get_header();
+ get_header();
  
- include '_header.php';
+ //include '_header.php';
  
  ?>
 
@@ -286,14 +286,14 @@ the right fit.</p>
  
  <h2>Neil A Robin</h2>
  <p>Neil runs his office like that of an old time family doctor, meeting with clients early in the morning, late in the evening, and on the weekend.</p> 
-<a class="btn btn-primary pull-left" href="http://www.hrkfamilylaw.com/attorneys/john-a-kay/">MORE</a>
+<a class="btn btn-primary pull-left" href="http://www.hrkfamilylaw.com/attorneys/neil-a-robin/">MORE</a>
  </div>
  
  <div class="col-sm-4">
 	<img src="<?php echo bloginfo('template_directory'); ?>/images/johnAkay.jpg" width="80%" style="margin: 0 auto 12px auto;" />
-	<h2>John A. Kay</h2>
+	<h2>John A Kay</h2>
  <p>John Kay has been practicing law in Illinois for more than 20 years. Since 2001, he has focused his practice on complex family law.</p> 
-<a class="btn btn-primary pull-left" href="http://www.hrkfamilylaw.com/attorneys/neil-a-robin/">MORE</a>
+<a class="btn btn-primary pull-left" href="http://www.hrkfamilylaw.com/attorneys/john-a-kay/">MORE</a>
  </div>
  
  </div> <!-- / attorneys content .row -->
@@ -317,8 +317,8 @@ the right fit.</p>
 
 <?php
 
-	//get_footer();
-	include '_footer.php';
+	get_footer();
+	//include '_footer.php';
 	
 	?>
 </body>
