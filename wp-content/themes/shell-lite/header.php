@@ -66,9 +66,7 @@ if (is_page(249)){
 
 <?php
 if (!is_page(249)){ ?>
-<!--
-<link rel="stylesheet" href="http://www.hrkfamilylaw.com/wp-content/themes/shell-lite/style.css" type="text/css" media="all" />
--->
+
 <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/style.css" type="text/css" media="all" />
 <?php shell_container(); // before container hook ?>
 <div id="container" class="hfeed">
